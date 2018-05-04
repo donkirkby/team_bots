@@ -1,0 +1,38 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "67d3ed2f97cbef62d82e6c9644a859af88b162cc7eb0ba857891137f66806eb9"
+        },
+        "host-environment-markers": {
+            "implementation_name": "cpython",
+            "implementation_version": "0",
+            "os_name": "posix",
+            "platform_machine": "x86_64",
+            "platform_python_implementation": "CPython",
+            "platform_release": "4.13.0-39-generic",
+            "platform_system": "Linux",
+            "platform_version": "#44~16.04.1-Ubuntu SMP Thu Apr 5 16:43:10 UTC 2018",
+            "python_full_version": "2.7.12",
+            "python_version": "2.7",
+            "sys_platform": "linux2"
+        },
+        "pipfile-spec": 6,
+        "requires": {},
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.python.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "rgkit": {
+            "hashes": [
+                "sha256:645ad7805bcd49a363e0e27780a2ebfeb4fa7766c4a7b9f0980bf4156e9437fb"
+            ],
+            "version": "==0.5.3"
+        }
+    },
+    "develop": {}
+}
