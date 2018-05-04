@@ -1,0 +1,15 @@
+language: python
+
+dist: trusty
+sudo: false
+
+matrix:
+  fast_finish: true
+  include:
+    - python: 2.7
+
+install:
+  - travis_retry pipenv install
+
+script:
+  - travis_wait rgrun robot1.py robot2.py -c 10 -H
