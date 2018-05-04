@@ -9,6 +9,7 @@ matrix:
     - python: 2.7
 
 install:
+  - travis_retry pip install pipenv
   - travis_retry pipenv install
 
 script:
