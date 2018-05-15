@@ -12,7 +12,7 @@ class Robot:
     			x = myx + dx
     			y = myy + dy
     			target = game.robots.get((x, y), None)
-    			if target and target.player_id != self.player_id:
+    			if target and target.player_id != self.player_id and (dx == 0 or dy == 0):
     				return ['attack', (x, y)]
     	if self.location == self.target:
             return ['guard']
