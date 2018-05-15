@@ -1,10 +1,11 @@
 from rgkit import rg
 
-TARGET = (5, 5)
-
 
 class Robot:
+    def __init__(self):
+        self.target = (5, 5)
+
     def act(self, game):
-        if self.location == TARGET:
+        if self.location == self.target:
             return ['guard']
-        return ['move', rg.toward(self.location, TARGET)]
+        return ['move', rg.toward(self.location, self.target)]
