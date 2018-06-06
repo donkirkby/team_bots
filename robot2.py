@@ -36,6 +36,19 @@ class Robot(object):
         move = random.sample(self.POSSIBLE_MOVES, 1)[0]
         return move
 
+
+    possible_moves = [
+        ["move", (0, 1)],
+        ["move", (0, -1)],
+        ["move", (1, 0)],
+        ["move", (-1, 0)],
+        ["guard"],
+        ["attack", (1, 0)],
+        ["attack", (-1, 0)],
+        ["attack", (0, -1)],
+        ["attack", (-1, 1)],
+    ]
+
     def act(self, game):
         move = self.choose_move()
 
