@@ -28,8 +28,18 @@ class Robot:
         if enemies:
             return ['attack', enemies[0].location]
 
-        if self.location == self.target:
-            return ['guard']
-        return ['move', rg.toward(self.location, self.target)]
+        closest_target = None
+        closest_distance = 1000000
+        for target in game.robots.values():
+            if target.player_id != self.player_id:
+                distance = rg.dist(self.location, target.location)
+                if distance < closest_distance:
+                    closest_target = target
+                    closest_distance = distance
+
+        return ['move', rg.toward(self.location, closest_target.location)]
+        # if self.location == self.target:
+        #     return ['guard']
+        # return ['move', rg.toward(self.location, self.target)]
 
 
